@@ -98,7 +98,7 @@ const FourthSection = () => {
         <h1 className="text-3xl px-6 lg:text-5xl font-semibold ">
           CELEBRATE YOUR CHAMPIONS
         </h1>
-        <h3 className="text-lg lg:text-3xl ">EDGE BUNDLE SPECIAL</h3>
+        <h3 className="text-lg lg:text-3xl ">EDGE BUNDLE SPECIAL.</h3>
         <p className="lg:text-xl space-x-6">
           <Link href={"/"} className="hover:underline">
             Learn More &gt;
