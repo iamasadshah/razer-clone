@@ -1,12 +1,10 @@
 import React from "react";
-import { Roboto } from "@next/font/google";
-import Link from "next/link";
 
-const roboto = Roboto({ subsets: ["latin"], weight: "500" });
+import Link from "next/link";
 
 const Secondsection = () => {
   return (
-    <div className="{roboto.className} cursor-pointer">
+    <div className=" cursor-pointer">
       {/* #set image on the background */}
       <div
         className="h-[700px] bg-cover bg-center text-center text-white pt-12 space-y-2"

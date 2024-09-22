@@ -1,12 +1,9 @@
 import React from "react";
-import { Roboto } from "@next/font/google";
 import Link from "next/link";
-
-const roboto = Roboto({ subsets: ["latin"], weight: "500" });
 
 const FourthSection = () => {
   return (
-    <div className="{roboto.className} cursor-pointer grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-4">
+    <div className=" cursor-pointer grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-4">
       {/* #set image on the background */}
       <div
         className="h-[500px] bg-cover bg-center text-center text-white pt-12 space-y-2"
@@ -84,7 +81,7 @@ const FourthSection = () => {
         <h1 className="text-3xl px-6 lg:text-5xl font-semibold ">
           RAZER | HELLO KITTY AND FRIENDS
         </h1>
-        <h3 className="text-lg lg:text-3xl ">IT'S MORE FUN WITH FRIENDS</h3>
+        <h3 className="text-lg lg:text-3xl ">I&#39;TS MORE FUN WITH FRIENDS</h3>
         <p className="lg:text-xl space-x-6">
           <Link href={"/"} className="hover:underline">
             Learn More &gt;
