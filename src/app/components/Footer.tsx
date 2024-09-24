@@ -208,7 +208,7 @@ const Footer = () => {
           </div>
           <div className="hidden lg:flex lg:flex-col">
             <span className="text-lg lg:text-base">Follow Us</span>
-            <div className="flex flex-col space-y-4 text-gray-400 text-base">
+            <div className="flex flex-col space-y-2 text-gray-400 text-base py-2 social">
               <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
                 <BiLogoFacebook />
               </div>

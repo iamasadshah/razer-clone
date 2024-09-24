@@ -10,4 +10,7 @@ body {
   .footer a {
     @apply hover:underline hover:text-white;
   }
+  .social div {
+    @apply hover:text-white;
+  }
 }
