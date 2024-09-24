@@ -5,3 +5,9 @@
 body {
   background: rgb(65, 65, 65);
 }
+
+@layer utilities {
+  .footer a {
+    @apply hover:underline hover:text-white;
+  }
+}

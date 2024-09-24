@@ -1,6 +1,15 @@
 "use client";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
+import {
+  BiLogoDiscord,
+  BiLogoFacebook,
+  BiLogoInstagram,
+  BiLogoTiktok,
+  BiLogoTwitch,
+  BiLogoTwitter,
+  BiLogoYoutube,
+} from "react-icons/bi";
 
 const Footer = () => {
   const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({
@@ -18,9 +27,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white p-6">
+    <footer className="bg-black text-white p-6 lg:bg-gray-900 footer">
       <div className="container mx-auto">
-        <div className="space-y-4 lg:grid lg:grid-cols-6 lg:gap-4 lg:border-b lg:border-gray-400">
+        <div className="space-y-4 lg:grid lg:grid-cols-6 lg:gap-4 lg:border-b lg:border-gray-400 lg:space-y-0">
           {/* Shop Section */}
           <div className="border-b border-gray-600 pb-2 lg:border-none">
             <div
@@ -78,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Explore Section */}
-          <div className="border-b border-gray-600 pb-2 lg:border-none">
+          <div className="border-b border-gray-600 pb-2 lg:border-none ">
             <div
               className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleAccordion(1)}
@@ -186,7 +195,7 @@ const Footer = () => {
                 }`}
               >
                 <li>
-                  <a href="https://www.razer.com/about">About Us</a>
+                  <a href="https://www.razer.com/about ">About Us</a>
                 </li>
                 <li>
                   <a href="https://www.razer.com/careers">Careers</a>
@@ -197,23 +206,47 @@ const Footer = () => {
               </ul>
             )}
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:flex-col">
             <span className="text-lg lg:text-base">Follow Us</span>
+            <div className="flex flex-col space-y-4 text-gray-400 text-base">
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoFacebook />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoInstagram />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoTwitter />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoYoutube />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoTiktok />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoTwitch />
+              </div>
+              <div className="flex items-center justify-center w-6 h-6 bg-gray-900 border-[1px] border-gray-200 rounded-full">
+                <BiLogoDiscord />
+              </div>
+            </div>
           </div>
           <div className="mt-4">
-            <p className="hidden lg:block text-green-400">
+            <p className="hidden lg:block text-green-400 text-[15px] text-nowrap">
               FOR GAMERS. BY GAMERS.™
             </p>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 text-center">
-          <div className="text-xs mb-6">
+        <div className="mt-8 text-center lg:flex lg:justify-between lg:items-center lg:px-4 lg:m-0 lg:py-4">
+          <div className="text-xs mb-6 lg:m-0">
             <p>Copyright © 2024 Razer Inc. All rights reserved.</p>
           </div>
-          <div className="flex justify-center space-x-1 mt-2 text-xs divide-x-[1.5px] text-gray-500 divide-gray-400 md:space-x-4 divide-opacity-50">
+          <div className="flex justify-center space-x-1 mt-2 text-xs text-gray-500 md:space-x-4 lg:m-0">
             <a href="https://www.razer.com/sitemap">Site Map</a>
+
             <a href="https://www.razer.com/legal">Legal Terms</a>
             <a href="https://www.razer.com/legal/customer-privacy-policy">
               Privacy Policy
@@ -226,7 +259,7 @@ const Footer = () => {
               United States | Change Location &gt;
             </a>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 lg:hidden">
             <p className="text-green-400">FOR GAMERS. BY GAMERS.™</p>
           </div>
         </div>
