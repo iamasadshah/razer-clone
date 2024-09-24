@@ -4,7 +4,6 @@ import Link from "next/link";
 const FourthSection = () => {
   return (
     <div className=" cursor-pointer grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-4">
-      {/* #set image on the background */}
       <a href="https://www.razer.com/razercon">
         <div
           className="h-[500px] bg-cover bg-center text-center text-white pt-12 space-y-2"
