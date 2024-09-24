@@ -18,22 +18,26 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white p-6 ">
-      <div className="container mx-auto ">
-        <div className="space-y-4 lg:grid lg:grid-cols-4">
+    <footer className="bg-black text-white p-6">
+      <div className="container mx-auto">
+        <div className="space-y-4 lg:grid lg:grid-cols-6 lg:gap-4 lg:border-b lg:border-gray-400">
           {/* Shop Section */}
-          <div className="border-b border-gray-600 pb-2 ">
+          <div className="border-b border-gray-600 pb-2 lg:border-none">
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleAccordion(0)}
             >
-              <span className="text-lg">Shop</span>
+              <span className="text-lg lg:text-base">Shop</span>
               <span className="text-xl lg:hidden">
                 {expanded[0] ? <FaTimes className="text-sm" /> : "+"}
               </span>
             </div>
-            {expanded[0] && (
-              <ul className="mt-2 space-y-2 text-gray-400 text-sm ">
+            {(expanded[0] || !expanded[0]) && (
+              <ul
+                className={`mt-2 space-y-2 text-gray-400 text-sm lg:block ${
+                  expanded[0] ? "" : "hidden lg:block"
+                }`}
+              >
                 <li>
                   <a href="https://www.razer.com/razerstores">RazerStores</a>
                 </li>
@@ -74,18 +78,22 @@ const Footer = () => {
           </div>
 
           {/* Explore Section */}
-          <div className="border-b border-gray-600 pb-2">
+          <div className="border-b border-gray-600 pb-2 lg:border-none">
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleAccordion(1)}
             >
-              <span className="text-lg">Explore</span>
+              <span className="text-lg lg:text-base">Explore</span>
               <span className="text-xl lg:hidden">
                 {expanded[1] ? <FaTimes className="text-sm" /> : "+"}
               </span>
             </div>
-            {expanded[1] && (
-              <ul className="mt-2 space-y-2 text-gray-400 text-sm">
+            {(expanded[1] || !expanded[1]) && (
+              <ul
+                className={`mt-2 space-y-2 text-gray-400 text-sm lg:block ${
+                  expanded[1] ? "" : "hidden lg:block"
+                }`}
+              >
                 <li>
                   <a href="https://www.razer.com/technology">Technology</a>
                 </li>
@@ -106,18 +114,22 @@ const Footer = () => {
           </div>
 
           {/* Support Section */}
-          <div className="border-b border-gray-600 pb-2">
+          <div className="border-b border-gray-600 pb-2 lg:border-none">
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleAccordion(2)}
             >
-              <span className="text-lg">Support</span>
+              <span className="text-lg lg:text-base">Support</span>
               <span className="text-xl lg:hidden">
                 {expanded[2] ? <FaTimes className="text-sm" /> : "+"}
               </span>
             </div>
-            {expanded[2] && (
-              <ul className="mt-2 space-y-2 text-gray-400 text-sm">
+            {(expanded[2] || !expanded[2]) && (
+              <ul
+                className={`mt-2 space-y-2 text-gray-400 text-sm lg:block ${
+                  expanded[2] ? "" : "hidden lg:block"
+                }`}
+              >
                 <li>
                   <a href="https://mysupport.razer.com/?c=us">Get Help</a>
                 </li>
@@ -157,19 +169,22 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="border-b border-gray-600 pb-2">
+          <div className="border-b border-gray-600 pb-2 lg:border-none">
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleAccordion(3)}
             >
-              <span className="text-lg">Company</span>
+              <span className="text-lg lg:text-base">Company</span>
               <span className="text-xl lg:hidden">
                 {expanded[3] ? <FaTimes className="text-sm" /> : "+"}
               </span>
             </div>
-            {expanded[3] && (
-              <ul className="mt-2 space-y-2 text-gray-400 text-sm">
-                {/* Add your company links here */}
+            {(expanded[3] || !expanded[3]) && (
+              <ul
+                className={`mt-2 space-y-2 text-gray-400 text-sm lg:block ${
+                  expanded[3] ? "" : "hidden lg:block"
+                }`}
+              >
                 <li>
                   <a href="https://www.razer.com/about">About Us</a>
                 </li>
@@ -182,10 +197,18 @@ const Footer = () => {
               </ul>
             )}
           </div>
+          <div className="hidden lg:block">
+            <span className="text-lg lg:text-base">Follow Us</span>
+          </div>
+          <div className="mt-4">
+            <p className="hidden lg:block text-green-400">
+              FOR GAMERS. BY GAMERS.™
+            </p>
+          </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 text-center ">
+        <div className="mt-8 text-center">
           <div className="text-xs mb-6">
             <p>Copyright © 2024 Razer Inc. All rights reserved.</p>
           </div>
